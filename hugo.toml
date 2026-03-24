@@ -1,0 +1,25 @@
+baseURL = "https://alwaysahead.org/"
+languageCode = "en-us"
+title = "Always Ahead"
+
+[params]
+  description = "A weekly newsletter for ambitious professionals who want practical AI insights, career strategies, and tech trends - without the hype."
+  author = "Linda Mohamed"
+  twitterHandle = "@lindamohamed_"
+  subscriberCount = "0"
+
+[taxonomies]
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[build]
+  [build.cachebusters]
+    [[build.cachebusters.cacheDir]]
+      source = "assets/css/main.css"
+      target = "css"
+    [[build.cachebusters.cacheDir]]
+      source = "assets/js/main.js"
+      target = "js"
