@@ -650,9 +650,15 @@ nav {
 }
 
 .persona-emoji {
-  font-size: 2rem;
   flex-shrink: 0;
   line-height: 1;
+  width: 2rem;
+  height: 2rem;
+  color: var(--green);
+}
+.persona-emoji svg {
+  width: 2rem;
+  height: 2rem;
 }
 
 .persona-card h3 {
@@ -688,24 +694,17 @@ nav {
   width: 160px;
   height: 160px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--green), var(--amber));
-  padding: 3px;
   margin: 0 auto 16px;
   display: block;
+  overflow: hidden;
 }
 
-.avatar-inner {
+.avatar-photo {
   width: 100%;
   height: 100%;
+  object-fit: cover;
   border-radius: 50%;
-  background: var(--bg-2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 3.5rem;
-  font-weight: 900;
-  color: var(--green);
-  letter-spacing: -0.05em;
+  display: block;
 }
 
 .about-badge {
@@ -806,8 +805,14 @@ nav {
 }
 
 .coming-icon {
-  font-size: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
   margin-bottom: 1rem;
+  color: var(--green);
+}
+.coming-icon svg {
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
 /* --- Final CTA --- */
