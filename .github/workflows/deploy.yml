@@ -23,10 +23,10 @@ jobs:
     runs-on: ubuntu-latest
     env:
       HUGO_VERSION: 0.124.0
-      HUGO_DEB: ${{ runner.temp }}/hugo.deb
-      HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
     steps:
       - name: Install Hugo CLI
+        env:
+          HUGO_DEB: ${{ runner.temp }}/hugo.deb
         run: |
           wget -O "$HUGO_DEB" \
             https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb
@@ -44,6 +44,7 @@ jobs:
 
       - name: Build with Hugo
         env:
+          HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
           HUGO_ENVIRONMENT: production
           BASE_URL: ${{ steps.pages.outputs.base_url }}
         run: hugo --gc --minify --baseURL "$BASE_URL/"
