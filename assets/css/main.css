@@ -899,6 +899,29 @@ footer {
   margin-bottom: 48px;
 }
 
+.footer-brand-row {
+  margin-bottom: 40px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.footer-ecosystem {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-ecosystem-note {
+  text-align: center;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.4);
+  padding: 20px 0 28px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  margin-bottom: 24px;
+}
+
 .footer-brand .nav-logo {
   color: white;
   margin-bottom: 12px;
@@ -908,7 +931,7 @@ footer {
 .footer-brand p {
   font-size: 0.85rem;
   line-height: 1.65;
-  max-width: 220px;
+  max-width: 480px;
   color: rgba(255,255,255,0.4);
 }
 
@@ -1029,6 +1052,11 @@ footer {
     gap: 32px;
   }
 
+  .footer-ecosystem {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+
   .footer-brand { grid-column: 1 / -1; }
 
   .footer-bottom {
@@ -1040,5 +1068,6 @@ footer {
 
 @media (max-width: 480px) {
   .footer-inner { grid-template-columns: 1fr; }
+  .footer-ecosystem { grid-template-columns: 1fr; }
   .hero-meta { flex-wrap: wrap; gap: 8px; }
 }
